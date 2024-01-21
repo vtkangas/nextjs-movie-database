@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, h3 {
+    font-family: var(--font-header);
+}
+
+p {
+    font-family: var(--font-main);
+}
+
+.page {
+    @apply flex flex-col place-self-center w-9/12 my-6
+}
