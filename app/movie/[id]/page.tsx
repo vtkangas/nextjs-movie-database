@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 import { Movie, getMovieById } from "@/lib/movies";
-import { getTmbdData } from "@/lib/tmbdData";
+import { getTmbdData } from "@/lib/tmdbData";
 import MovieView from "@/components/MovieView";
 
 interface Props {
