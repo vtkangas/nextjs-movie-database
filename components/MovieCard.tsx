@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import WatchlistButtonMini from "./WatchlistButton/WatchlisButtonMini";
+import WatchlistButtonMini from "./WatchlisButtonMini";
 
 interface Props {
   id: string;
