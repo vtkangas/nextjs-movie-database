@@ -15,16 +15,20 @@ interface Props {
 export default async function GenrePage({ params }: Props) {
   const genre: string = genres[params.genre];
   const page: number = Number(params.page);
-  // const order : string = 'date-desc'
 
   const movies: Movie[] = await getMoviesByGenre(genre, page);
   const moviesCount = await getCount(genre);
 
   return (
     <div className="page">
-      <h2 className="text-3xl">{genre}</h2>
-
-      <SortList path={`/${params.genre}/1/`} />
+      <div className="header-container">
+        <div className="header-content">
+          <h2 className="text-4xl">{genre}</h2>
+        </div>
+        <div className="sortlist-container">
+          <SortList path={`/${params.genre}/1/`} />
+        </div>
+      </div>
 
       <MovieList movies={movies} />
 

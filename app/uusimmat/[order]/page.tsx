@@ -14,9 +14,14 @@ export default async function NewestPage({ params }: Props) {
 
   return (
     <div className="page">
-      <h2 className="text-3xl">Uusimmat</h2>
-
-      <SortList path={"/uusimmat"} />
+      <div className="header-container">
+        <div className="header-content">
+          <h2 className="text-4xl m-0">Uusimmat</h2>
+        </div>
+        <div className="sortlist-container">
+          <SortList path={"/uusimmat"} order={params.order} />
+        </div>
+      </div>
 
       <MovieList movies={movies} />
     </div>

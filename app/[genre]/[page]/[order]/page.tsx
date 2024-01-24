@@ -22,9 +22,14 @@ export default async function GenreWithOrderPage({ params }: Props) {
 
   return (
     <div className="page">
-      <h2 className="text-3xl">{genre}</h2>
-
-      <SortList path={`/${params.genre}/1/`} />
+      <div className="header-container">
+        <div className="header-content">
+          <h2 className="text-4xl">{genre}</h2>
+        </div>
+        <div className="sortlist-container">
+          <SortList path={`/${params.genre}/1/`} order={params.order} />
+        </div>
+      </div>
 
       <MovieList movies={movies} />
 

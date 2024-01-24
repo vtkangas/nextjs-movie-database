@@ -11,5 +11,21 @@ p {
 }
 
 .page {
-    @apply flex flex-col place-self-center w-9/12 my-6
+  @apply flex flex-col place-self-center w-9/12 my-6;
+}
+
+.header-container {
+  @apply flex flex-col lg:flex-row items-center;
+}
+
+.header-content {
+  @apply w-full p-4 pb-0 lg:p-4 lg:w-1/2;
+}
+
+.sortlist-container {
+  @apply flex flex-grow w-full p-4 lg:w-1/2 lg:justify-end;
+}
+
+.list-item a {
+  @apply font-main active:bg-gray-900 hover:bg-gray-800 rounded-lg;
 }
